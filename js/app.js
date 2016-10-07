@@ -37,22 +37,22 @@ $container.append($player);
     switch (move.keyCode)
     {
       case 37:
-        $('.player').css('left', position.left - 60 + 'px');
+        $('.player').css('left', position.left - 30 + 'px');
         divCollide($player, $obstacles);
         break;
 
       case 38:
-        $('.player').css('top', position.top - 60 + 'px');
+        $('.player').css('top', position.top - 30 + 'px');
         divCollide($player, $obstacles);
         break;
 
       case 39:
-        $('.player').css('left', position.left + 60 + 'px');
+        $('.player').css('left', position.left + 30 + 'px');
         divCollide($player, $obstacles);
         break;
 
       case 40:
-        $('.player').css('top', position.top + 60 + 'px');
+        $('.player').css('top', position.top + 30 + 'px');
         divCollide($player, $obstacles);
         break;
     }
@@ -64,22 +64,28 @@ function getRandom(a, b) {
   return (Math.random()*a)+b;
 }
 
+// function myFunction() {
+//   setInterval(function(){ alert("Hello"); }, 3000);
+// }
+
   var $obstacles =$(".obstacles"),
     width = $obstacles.get(0).width,
     screenWidth = $(".flex-container").width(),
     duration = getRandom(4500, 500);
 
   function animateObsticles() {
-    $obstacles.eq(0).css("left", -width).delay(getRandom(1000, 100)).animate({
+    $obstacles.eq(0).css("left", -width).delay(getRandom(2000, 100)).animate({
     "left": screenWidth
     }, duration, animateObsticles);
 
-    $obstacles.eq(1).css("left", -width).delay(getRandom(1000, 100)).animate({
+    $obstacles.eq(1).css("left", -width).delay(getRandom(2000, 100)).animate({
     "left": screenWidth
     }, duration, animateObsticles);
   }
 
-   animateObsticles();
+  animateObsticles();
+
+
 
 
 
@@ -110,16 +116,29 @@ function getRandom(a, b) {
     var obstacleLeft = $obstacles.offset().left;
     var obstacleRight = Number($obstacles.offset().left) + Number($obstacles.width());
     var obstacleBottom = Number($obstacles.offset().top) + Number($obstacles.height());
-    if (playerRight > obstacleLeft && playerLeft < obstacleRight && playerTop < playerBottom && playerBottom > obstacleTop) {
+    if (playerRight > obstacleLeft && playerLeft < obstacleRight && playerTop < obstacleBottom && playerBottom > obstacleTop) {
 
-      alert("I am an alert box!");
-      reload
+      location.reload();
 
     }
   }
 
-  $('body').on('keydown', function() {
-  divCollide($player, $obstacles);
-});
+  // $('body').on('keydown', function() {
+  //   $obstacles.each(function() {
+  //     divCollide($player,$(this));
+  //   })
+  //   // divCollide($player, $obstacles);
+  // });
+
+  setInterval(function() {
+    $obstacles.each(function() {
+      divCollide($player,$(this));
+    })
+  }, 100);
+
+
+//looping through the when it gets to the end
+
+// function
 
 });

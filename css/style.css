@@ -37,12 +37,13 @@ body {
   position: absolute;
   display: flex;
   align-items: start-end;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   margin: 0 0 0 50%;
   left: 0px;
   top: 0px;
   background-color: black;
+  border-radius: 50%;
 }
 
 .start {
@@ -72,18 +73,20 @@ body {
   width: 100px;
   height: 70px;
   left: 0px;
-  top: 70px;
+  top: 100px;
 }
 
 #obstacle2 {
-  top: 246px;
   position: absolute;
   width: 70px;
   height: 70px;
-  left: 20px;
+  left: 0px;
+  top: 246px;
+
 }
 
 /*This css styling is for main.html backup page for future use*/
+/*When using main.html - make sure to use styles below*/
 h1 {
   font-family: 'Shadows Into Light', cursive;
   font-size: 60px;
