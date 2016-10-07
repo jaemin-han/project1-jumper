@@ -3,14 +3,19 @@ Project Name: I'm Late to GA
 Author: Jaemin Han
 */
 
-document.addEventListener("DOMContentLoaded", function(event) {
+// document.addEventListener("DOMContentLoaded", function(event) {
 console.log('ready.');
+
+$(document).ready(function() {
+
+// $(function(event) {
+
 
 // Create 80 divs as a gameboard
 var $container = $('.flex-container');
 
 var $boxes = function () {
- for (var i = 0; i < 40; i++) {
+ for (var i = 0; i < 20; i++) {
   var $div = $('<div>');
   $div.addClass('flex-item');
   $container.append($div);
@@ -33,79 +38,88 @@ $container.append($player);
     {
       case 37:
         $('.player').css('left', position.left - 60 + 'px');
-        // check collide
+        divCollide($player, $obstacles);
         break;
 
       case 38:
         $('.player').css('top', position.top - 60 + 'px');
+        divCollide($player, $obstacles);
         break;
 
       case 39:
         $('.player').css('left', position.left + 60 + 'px');
+        divCollide($player, $obstacles);
         break;
 
       case 40:
         $('.player').css('top', position.top + 60 + 'px');
+        divCollide($player, $obstacles);
         break;
     }
   });
 
-  // Obstabcle #1
-  var img = $("#obstacle1"),
-    width = img.get(0).width,
+
+//randomize obstacles at different speed
+function getRandom(a, b) {
+  return (Math.random()*a)+b;
+}
+
+  var $obstacles =$(".obstacles"),
+    width = $obstacles.get(0).width,
     screenWidth = $(".flex-container").width(),
-    duration = 3000;
+    duration = getRandom(4500, 500);
 
-  function animateObsticle1() {
-    img.css("left", -width).animate({
+  function animateObsticles() {
+    $obstacles.eq(0).css("left", -width).delay(getRandom(1000, 100)).animate({
     "left": screenWidth
-    }, duration, animateObsticle1);
-    }
+    }, duration, animateObsticles);
 
-    animateObsticle1();
+    $obstacles.eq(1).css("left", -width).delay(getRandom(1000, 100)).animate({
+    "left": screenWidth
+    }, duration, animateObsticles);
+  }
+
+   animateObsticles();
+
 
 
   // Obstacle #2
-  var img2 = $("#obstacle2"),
-    width = img2.get(0).width,
-    screenWidth = $(".flex-container").width(),
-    duration = 5000;
+  // var img2 = $("#obstacle2"),
+  //   width = img2.get(0).width,
+  //   screenWidth = $(".flex-container").width(),
+  //   duration = 5000;
 
-  function animateObsticle2() {
-    img2.css("left", -width).animate({
-    "left": screenWidth
-    }, duration, animateObsticle2);
-    }
+  // function animateObsticle2() {
+  //   img2.css("left", -width).animate({
+  //   "left": screenWidth
+  //   }, duration, animateObsticle2);
+  //   }
 
-    animateObsticle2();
+  //   animateObsticle2();
 
 // Trying to collide two objects
   var $player = $('.player');
-  var $obstacle1 = $('#obstacle1');
+  var $obstacles = $('.obstacles');
 
-  function divCollide($player, $obstacle1) {
+  function divCollide($player, $obstacles) {
     var playerTop = $player.offset().top;
     var playerLeft = $player.offset().left;
     var playerRight = Number($player.offset().left) + Number($player.width());
     var playerBottom = Number($player.offset().top) + Number($player.height());
-    var obstacleTop = $obstacle1.offset().top;
-    var obstacleLeft = $obstacle1.offset().left;
-    var obstacleRight = Number($obstacle1.offset().left) + Number($obstacle1.width());
-    var obstacleBottom = Number($obstacle1.offset().top) + Number($obstacle1.height());
+    var obstacleTop = $obstacles.offset().top;
+    var obstacleLeft = $obstacles.offset().left;
+    var obstacleRight = Number($obstacles.offset().left) + Number($obstacles.width());
+    var obstacleBottom = Number($obstacles.offset().top) + Number($obstacles.height());
     if (playerRight > obstacleLeft && playerLeft < obstacleRight && playerTop < playerBottom && playerBottom > obstacleTop) {
-      console.log(playerRight);
 
-
-      $('body').css('background-color', 'purple');
+      alert("I am an alert box!");
+      reload
 
     }
   }
 
   $('body').on('keydown', function() {
-  divCollide($player, $obstacle1);
+  divCollide($player, $obstacles);
 });
 
 });
-
-
-
