@@ -1,5 +1,5 @@
 /*
-Project Name: I'm Late to GA
+Project Name: NYC Jumper
 Author: Jaemin Han
 */
 
@@ -18,8 +18,8 @@ body {
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
-  height: 90%;
+  width: 100%;
+  height: 80%;
   top: 0;
   left: 0;
   background-color: #F5F5DC;
@@ -49,7 +49,7 @@ body {
 .start {
   display: flex;
   width: 100%;
-  height: 70px;
+  height: 50px;
   background-color: #FFA07A;
 }
 
@@ -65,7 +65,8 @@ body {
 }
 
 .obstacles {
-  background-color: orange;
+  /*background-color: orange;*/
+  border-radius: 20%
 }
 
 #obstacle1 {
@@ -74,6 +75,7 @@ body {
   height: 70px;
   left: 0px;
   top: 100px;
+  background-color: purple;
 }
 
 #obstacle2 {
@@ -82,7 +84,25 @@ body {
   height: 70px;
   left: 0px;
   top: 246px;
+  background-color: yellow;
+}
 
+#obstacle3 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 0px;
+  top: 350px;
+  background-color: orange;
+}
+
+#obstacle4 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 350px;
+  right: 0px;
+  background-color: blue;
 }
 
 /*This css styling is for main.html backup page for future use*/

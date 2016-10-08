@@ -1,5 +1,5 @@
 /*
-Project Name: I'm Late to GA
+Project Name: NYC Jumper
 Author: Jaemin Han
 */
 
@@ -64,27 +64,46 @@ function getRandom(a, b) {
   return (Math.random()*a)+b;
 }
 
-// function myFunction() {
-//   setInterval(function(){ alert("Hello"); }, 3000);
-// }
-
-  var $obstacles =$(".obstacles"),
-    width = $obstacles.get(0).width,
-    screenWidth = $(".flex-container").width(),
-    duration = getRandom(4500, 500);
+  var $obstacles =$(".obstacles");
+  var width = $obstacles.get(0).width;
+  var screenWidth = $(".flex-container").width();
+  var duration = getRandom(3500, 1000);
+  // var right= $(".right").offset().left;
 
   function animateObsticles() {
     $obstacles.eq(0).css("left", -width).delay(getRandom(2000, 100)).animate({
-    "left": screenWidth
-    }, duration, animateObsticles);
+    "left": screenWidth}, duration, animateObsticles);
 
-    $obstacles.eq(1).css("left", -width).delay(getRandom(2000, 100)).animate({
-    "left": screenWidth
-    }, duration, animateObsticles);
-  }
+    $obstacles.eq(1).css("left", -width).delay(getRandom(3000, 1000)).animate({
+    "left": screenWidth}, duration, animateObsticles);
+
+    $obstacles.eq(2).css("left", -width).delay(getRandom(2000, 1000)).animate({
+    "left": screenWidth}, duration, animateObsticles);
+
+    // $obstacles.eq(3).css("left", -width, function(){ return $(this).offset().left: }).delay(getRandom(2300, 700)).animate({
+    // "left": "-100px"}, "slow", animateObsticles);
+
+    }
 
   animateObsticles();
 
+
+
+// Trying to move obstacles from right to left
+function rightToLeft(){
+  var $ob4 = $('#obstacle4');
+  var distance = 1200;
+  setInterval(function(){
+    $ob4.css('left', distance + 'px');
+    if (distance < -100) {
+      distance = 1200;
+    } else {
+      distance -= 5;
+    }
+  }, 100);
+};
+
+  rightToLeft();
 
 
 
