@@ -49,19 +49,19 @@ body {
 }
 
 .start {
-  display: flex;
+/*  display: flex;*/
+  align-self: flex-start;
   width: 100%;
   height: 50px;
   background-color: #FFA07A;
 }
 
 .finish {
-  order: 4;
+  order: 2;
   align-self: flex-end;
   width: 100%;
   height: 50px;
   background-color: #F5DEB3;
-  top: 700px;
 }
 
 .obstacles {
@@ -70,8 +70,8 @@ body {
 
 #obstacle1 {
   position: absolute;
-  width: 100px;
-  height: 70px;
+  width: 70px;
+  height: 50px;
   left: 0px;
   top: 100px;
   background-color: purple;
@@ -79,8 +79,8 @@ body {
 
 #obstacle2 {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   left: 0px;
   top: 246px;
   background-color: yellow;
@@ -88,8 +88,8 @@ body {
 
 #obstacle3 {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   left: 0px;
   top: 350px;
   background-color: orange;
@@ -97,8 +97,8 @@ body {
 
 #obstacle4 {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   top: 350px;
   right: 0px;
   background-color: blue;
@@ -106,12 +106,40 @@ body {
 
 #obstacle5 {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+  top: 380px;
+  right: 0px;
+  background-color: tomato;
+}
+
+#obstacle6 {
+  position: absolute;
+  width: 90px;
+  height: 50px;
   top: 400px;
   right: 0px;
-  background-color: yellow;
+  background-color: gray;
 }
+
+#obstacle7 {
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: 90px;
+  right: 0px;
+  background-color: green;
+}
+
+#obstacle8 {
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  top: 110px;
+  right: 0px;
+  background-color: red;
+}
+
 /*This css styling is for main.html backup page for future use*/
 /*When using main.html - make sure to use styles below*/
 h1 {

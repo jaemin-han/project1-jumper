@@ -86,10 +86,10 @@ function getRandom(a, b) {
 
 // Trying to loop obstacles left to right
 function leftToRight(){
-  var $ob5 = $('#obstacle5');
+  var $right = $('.right');
   var location = -50;
   setInterval(function(){
-    $ob5.css('left', location + 'px');
+    $right.css('left', location + 'px');
     if (location > 1200) {
       location = -50;
     } else {
@@ -99,6 +99,22 @@ function leftToRight(){
 };
 
   leftToRight();
+
+function leftToRight2(){
+  var $ob8 = $('#obstacle8');
+  var location = -300;
+  setInterval(function(){
+    $ob8.css('left', location + 'px');
+    if (location > 1200) {
+      location = -50;
+    } else {
+      location += 20;
+    }
+  }, 100);
+};
+
+  leftToRight2();
+
 
 
 // Trying to move obstacles from right to left
@@ -116,6 +132,21 @@ function rightToLeft(){
 };
 
   rightToLeft();
+
+  function rightToLeft1(){
+  var $ob5 = $('#obstacle5');
+  var distance = 800;
+  setInterval(function(){
+    $ob5.css('left', distance + 'px');
+    if (distance < -50) {
+      distance = 1200;
+    } else {
+      distance -= 20;
+    }
+  }, 100);
+};
+
+  rightToLeft1();
 
 
 
@@ -150,16 +181,9 @@ function rightToLeft(){
     if (playerRight > obstacleLeft && playerLeft < obstacleRight && playerTop < obstacleBottom && playerBottom > obstacleTop) {
 
       location.reload();
-
     }
   }
 
-  // $('body').on('keydown', function() {
-  //   $obstacles.each(function() {
-  //     divCollide($player,$(this));
-  //   })
-  //   // divCollide($player, $obstacles);
-  // });
 
   setInterval(function() {
     $obstacles.each(function() {
@@ -167,9 +191,5 @@ function rightToLeft(){
     })
   }, 100);
 
-
-//looping through the when it gets to the end
-
-// function
 
 });
