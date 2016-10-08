@@ -39,21 +39,25 @@ $container.append($player);
       case 37:
         $('.player').css('left', position.left - 20 + 'px');
         divCollide($player, $obstacles);
+        win($player, $winning);
         break;
 
       case 38:
         $('.player').css('top', position.top - 20 + 'px');
         divCollide($player, $obstacles);
+        win($player, $winning);
         break;
 
       case 39:
         $('.player').css('left', position.left + 20 + 'px');
         divCollide($player, $obstacles);
+        win($player, $winning);
         break;
 
       case 40:
         $('.player').css('top', position.top + 20 + 'px');
         divCollide($player, $obstacles);
+        win($player, $winning);
         break;
     }
   });
@@ -134,8 +138,8 @@ function rightToLeft(){
   rightToLeft();
 
   function rightToLeft1(){
-  var $ob5 = $('#obstacle5');
-  var distance = 800;
+    var $ob5 = $('#obstacle5');
+    var distance = 800;
   setInterval(function(){
     $ob5.css('left', distance + 'px');
     if (distance < -50) {
@@ -151,21 +155,10 @@ function rightToLeft(){
 
 
 
-  // Obstacle #2
-  // var img2 = $("#obstacle2"),
-  //   width = img2.get(0).width,
-  //   screenWidth = $(".flex-container").width(),
-  //   duration = 5000;
-
-  // function animateObsticle2() {
-  //   img2.css("left", -width).animate({
-  //   "left": screenWidth
-  //   }, duration, animateObsticle2);
-  //   }
-
-  //   animateObsticle2();
-
-// Trying to collide two objects
+//Collide detaction on all obstacles when the player moves
+//Detection based on movement 'left' 'up' 'right' 'down'
+//Assistance from Matt Keigwin to make the detection
+//Created custom box to set alert, text, and reload
   var $player = $('.player');
   var $obstacles = $('.obstacles');
 
@@ -179,17 +172,29 @@ function rightToLeft(){
     var obstacleRight = Number($obstacles.offset().left) + Number($obstacles.width());
     var obstacleBottom = Number($obstacles.offset().top) + Number($obstacles.height());
     if (playerRight > obstacleLeft && playerLeft < obstacleRight && playerTop < obstacleBottom && playerBottom > obstacleTop) {
-
+      alert("Shoot~! Next Time look left and right before crossing.")
       location.reload();
     }
   }
-
 
   setInterval(function() {
     $obstacles.each(function() {
       divCollide($player,$(this));
     })
   }, 100);
+
+// If a player reaches the bottom of the page - alert occurs
+  var $winning = $('.finish');
+
+  function win($player, $winning){
+    var playerBottom = Number($player.offset().top) + Number($player.height());
+    var finishBottom = Number($winning.offset().top) + Number($winning.height());
+    if(playerBottom > finishBottom) {
+      alert("Winning! You survived. Play Again!");
+      location.reload();
+    }
+  }
+  win($player, $winning);
 
 
 });
