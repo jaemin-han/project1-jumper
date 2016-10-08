@@ -15,7 +15,7 @@ $(document).ready(function() {
 var $container = $('.flex-container');
 
 var $boxes = function () {
- for (var i = 0; i < 20; i++) {
+ for (var i = 0; i < 30; i++) {
   var $div = $('<div>');
   $div.addClass('flex-item');
   $container.append($div);
@@ -37,29 +37,29 @@ $container.append($player);
     switch (move.keyCode)
     {
       case 37:
-        $('.player').css('left', position.left - 30 + 'px');
+        $('.player').css('left', position.left - 20 + 'px');
         divCollide($player, $obstacles);
         break;
 
       case 38:
-        $('.player').css('top', position.top - 30 + 'px');
+        $('.player').css('top', position.top - 20 + 'px');
         divCollide($player, $obstacles);
         break;
 
       case 39:
-        $('.player').css('left', position.left + 30 + 'px');
+        $('.player').css('left', position.left + 20 + 'px');
         divCollide($player, $obstacles);
         break;
 
       case 40:
-        $('.player').css('top', position.top + 30 + 'px');
+        $('.player').css('top', position.top + 20 + 'px');
         divCollide($player, $obstacles);
         break;
     }
   });
 
 
-//randomize obstacles at different speed
+//randomize obstacles at [1] different starting speed and [2] movement speed
 function getRandom(a, b) {
   return (Math.random()*a)+b;
 }
@@ -68,7 +68,7 @@ function getRandom(a, b) {
   var width = $obstacles.get(0).width;
   var screenWidth = $(".flex-container").width();
   var duration = getRandom(3500, 1000);
-  // var right= $(".right").offset().left;
+
 
   function animateObsticles() {
     $obstacles.eq(0).css("left", -width).delay(getRandom(2000, 100)).animate({
@@ -80,13 +80,25 @@ function getRandom(a, b) {
     $obstacles.eq(2).css("left", -width).delay(getRandom(2000, 1000)).animate({
     "left": screenWidth}, duration, animateObsticles);
 
-    // $obstacles.eq(3).css("left", -width, function(){ return $(this).offset().left: }).delay(getRandom(2300, 700)).animate({
-    // "left": "-100px"}, "slow", animateObsticles);
-
     }
 
   animateObsticles();
 
+// Trying to loop obstacles left to right
+function leftToRight(){
+  var $ob5 = $('#obstacle5');
+  var location = -50;
+  setInterval(function(){
+    $ob5.css('left', location + 'px');
+    if (location > 1200) {
+      location = -50;
+    } else {
+      location += 20;
+    }
+  }, 100);
+};
+
+  leftToRight();
 
 
 // Trying to move obstacles from right to left
@@ -95,10 +107,10 @@ function rightToLeft(){
   var distance = 1200;
   setInterval(function(){
     $ob4.css('left', distance + 'px');
-    if (distance < -100) {
+    if (distance < -50) {
       distance = 1200;
     } else {
-      distance -= 5;
+      distance -= 20;
     }
   }, 100);
 };
