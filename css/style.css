@@ -257,7 +257,6 @@ input {
   /*margin: 0 0 0 50%;*/
   left: 50%;
   top: 0px;
-
 }
 
 .player img{
@@ -385,17 +384,15 @@ input {
   font-family: 'Source Sans Pro', sans-serif;
   margin-top: 540px;
   position: bottom;
-  background-color: blue;
 }
 
 .half-col {
-  width: 46%;
+  width: 48%;
   float: left;
   padding: 2em;
   position: relative;
   min-height: 1px;
 }
-
 
 /*When a player reaches the bottom
 1) Scores a point
@@ -408,6 +405,19 @@ input {
   width: 50px;
   margin: 600px;
 }
+
+#score_win {
+  position: relative
+  height: 40px;
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: #DEB887;
+}
+
+
 
 /*Transferring data from the landing page*/
 #player_name {

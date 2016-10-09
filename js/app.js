@@ -223,14 +223,6 @@ function rightToLeft(){
     var playerBottom = Number($player.offset().top) + Number($player.height());
     var finishBottom = Number($winning.offset().top) + Number($winning.height());
     if(playerBottom > finishBottom) {
-      // alert("Winning! You survived. Play Again!");
-      // location.reload();
-
-        // This was What I tried to create scoring 10/8
-        // if(score_updated === false){
-        //   score.text(parseInt(score.text()) + 1);
-        //   score_updated = true;
-        // }
 
       gameScore+=1;
       $('#score').text(gameScore);
