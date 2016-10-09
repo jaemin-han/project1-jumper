@@ -26,8 +26,8 @@ $boxes();
 
 //creating a player class under the container div
 var $player = $('<div class="player"></div>');
-// var $gif_img = '<img src="img/player2.gif">';
-//   $player.append($gif_img);
+var $gif_img = $('<img src="img/playernew.gif">');
+  $player.append($gif_img);
   $container.append($player);
 
 
@@ -223,8 +223,8 @@ function rightToLeft(){
     var playerBottom = Number($player.offset().top) + Number($player.height());
     var finishBottom = Number($winning.offset().top) + Number($winning.height());
     if(playerBottom > finishBottom) {
-      alert("Winning! You survived. Play Again!");
-      location.reload();
+      // alert("Winning! You survived. Play Again!");
+      // location.reload();
 
         // This was What I tried to create scoring 10/8
         // if(score_updated === false){
@@ -232,20 +232,18 @@ function rightToLeft(){
         //   score_updated = true;
         // }
 
-      // gameScore++;
-      // score.text = gameScore;
-      // scorePlus();
+      gameScore+=1;
+      $('#score').text(gameScore);
+      scorePlus();
 
     }
   }
   win($player, $winning);
 
 // Adding refresh with score plus plus
- // function scorePlus(){
- //  $player.offset().top = 0;
- // }
-
-// scorePlus();
+ function scorePlus(){
+  $player.offset({top: 0, left: 650}).top = 0;
+ }
 
 
 //Please note -- this code is from our group's project [WDI w02-d03 lab]

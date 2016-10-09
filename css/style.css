@@ -226,7 +226,7 @@ input {
 }
 /*css styles for nyc_jumper.html file - End*/
 
-/*Below are css styles for index.html file - start*/
+/*Below are css styles for index.html GAME file - start*/
 .flex-container {
   position: absolute;
   display: flex;
@@ -235,7 +235,7 @@ input {
   height: 80%;
   top: 0;
   left: 0;
-/*  background-color: #F5F5DC;*/
+  background-color: gray;
   border: 1px solid black;
   overflow:auto;
 }
@@ -254,11 +254,16 @@ input {
   align-items: start-end;
   width: 28px;
   height: 50px;
-  margin: 0 0 0 50%;
-  left: 0px;
+  /*margin: 0 0 0 50%;*/
+  left: 50%;
   top: 0px;
-  background-color: black;
-  background: url(../img/player.png) no-repeat;
+
+}
+
+.player img{
+  height: 50px;
+  width: 25px;
+  border-radius: 50%;
 }
 
 .start {
