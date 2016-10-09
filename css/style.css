@@ -10,8 +10,8 @@ body {
   text-align: center;
   background: no-repeat center center fixed;
   background-size: 100% 100%;
-/*  overflow:auto;
-  overflow-x:hidden;*/
+  overflow-y:hidden;
+  overflow-x:hidden;
 }
 
 .flex-container {
@@ -138,6 +138,14 @@ body {
   top: 110px;
   right: 0px;
   background-color: red;
+}
+
+.score_win {
+  text-align: center;
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  margin: 600px;
 }
 
 /*This css styling is for main.html backup page for future use*/

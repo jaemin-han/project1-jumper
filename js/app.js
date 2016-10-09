@@ -83,7 +83,6 @@ function getRandom(a, b) {
 
     $obstacles.eq(2).css("left", -width).delay(getRandom(2000, 1000)).animate({
     "left": screenWidth}, duration, animateObsticles);
-
     }
 
   animateObsticles();
@@ -162,6 +161,7 @@ function rightToLeft(){
   var $player = $('.player');
   var $obstacles = $('.obstacles');
 
+
   function divCollide($player, $obstacles) {
     var playerTop = $player.offset().top;
     var playerLeft = $player.offset().left;
@@ -185,6 +185,9 @@ function rightToLeft(){
 
 // If a player reaches the bottom of the page - alert occurs
   var $winning = $('.finish');
+  var score = $('#score');
+  var gameScore = 0;
+  // var score_updated = false;
 
   function win($player, $winning){
     var playerBottom = Number($player.offset().top) + Number($player.height());
@@ -192,9 +195,27 @@ function rightToLeft(){
     if(playerBottom > finishBottom) {
       alert("Winning! You survived. Play Again!");
       location.reload();
+
+        // This was What I tried to create scoring 10/8
+        // if(score_updated === false){
+        //   score.text(parseInt(score.text()) + 1);
+        //   score_updated = true;
+        // }
+
+      // gameScore++;
+      // score.text = gameScore;
+      // scorePlus();
+
     }
   }
   win($player, $winning);
+
+// Adding refresh with score plus plus
+ // function scorePlus(){
+ //  $player.offset().top = 0;
+ // }
+
+// scorePlus();
 
 
 });
