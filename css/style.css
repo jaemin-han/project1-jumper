@@ -14,8 +14,9 @@ body {
   text-align: center;
   background: no-repeat center center fixed;
   background-size: 100% 100%;
-  overflow-y:hidden;
+  overflow: auto;
   overflow-x:hidden;
+  overflow-y:hidden;
 }
 
 /*html {
@@ -251,13 +252,13 @@ input {
   position: absolute;
   display: flex;
   align-items: start-end;
-  width: 50px;
+  width: 28px;
   height: 50px;
   margin: 0 0 0 50%;
   left: 0px;
   top: 0px;
   background-color: black;
-  border-radius: 50%;
+  background: url(../img/player.png) no-repeat;
 }
 
 .start {
@@ -288,43 +289,44 @@ input {
   height: 50px;
   left: 0px;
   top: 100px;
-  background-color: purple;
+  background: url(../img/bmw.png) no-repeat;
+
 }
 
 #obstacle2 {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 40px;
   left: 0px;
-  top: 246px;
-  background-color: yellow;
+  top: 50px;
+  background: url(../img/lambo.png) no-repeat;
 }
 
 #obstacle3 {
   position: absolute;
-  width: 50px;
+  width: 75px;
   height: 50px;
   left: 0px;
   top: 350px;
-  background-color: orange;
+  background: url(../img/police.png) no-repeat;
 }
 
 #obstacle4 {
   position: absolute;
-  width: 50px;
+  width: 70px;
   height: 50px;
   top: 350px;
   right: 0px;
-  background-color: blue;
+  background: url(../img/taxi1.png) no-repeat;
 }
 
 #obstacle5 {
   position: absolute;
-  width: 50px;
+  width: 70px;
   height: 50px;
-  top: 380px;
+  top: 390px;
   right: 0px;
-  background-color: tomato;
+  background: url(../img/taxi1.png) no-repeat;
 }
 
 #obstacle6 {
@@ -333,16 +335,34 @@ input {
   height: 50px;
   top: 400px;
   right: 0px;
-  background-color: gray;
+  background: url(../img/blackcar.png) no-repeat;
 }
 
 #obstacle7 {
   position: absolute;
-  width: 90px;
+  width: 100px;
   height: 50px;
   top: 90px;
   right: 0px;
-  background-color: green;
+  background: url(../img/bus1.png) no-repeat;
+}
+
+#obstacle7a {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 340px;
+  right: 0px;
+  background: url(../img/bus2.png) no-repeat;
+}
+
+#obstacle7b {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  top: 215px;
+  right: 0px;
+  background: url(../img/cyclist.png) no-repeat;
 }
 
 #obstacle8 {
@@ -351,7 +371,7 @@ input {
   height: 50px;
   top: 110px;
   right: 0px;
-  background-color: red;
+  background: url(../img/schoolbus.png) no-repeat;
 }
 
 /*Bottom Section division*/

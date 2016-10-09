@@ -26,7 +26,9 @@ $boxes();
 
 //creating a player class under the container div
 var $player = $('<div class="player"></div>');
-$container.append($player);
+// var $gif_img = '<img src="img/player2.gif">';
+//   $player.append($gif_img);
+  $container.append($player);
 
 
 // Create arrow movements for player
@@ -151,7 +153,35 @@ function rightToLeft(){
 
   rightToLeft1();
 
+  function rightToLeft2(){
+    var $ob7a = $('#obstacle7a');
+    var distance = 400;
+  setInterval(function(){
+    $ob7a.css('left', distance + 'px');
+    if (distance < -50) {
+      distance = 1200;
+    } else {
+      distance -= 40;
+    }
+  }, 100);
+};
 
+  rightToLeft2();
+
+  function rightToLeft3(){
+    var $ob7b = $('#obstacle7b');
+    var distance = 900;
+  setInterval(function(){
+    $ob7b.css('left', distance + 'px');
+    if (distance < -50) {
+      distance = 1200;
+    } else {
+      distance -= 30;
+    }
+  }, 100);
+};
+
+  rightToLeft3();
 
 
 //Collide detaction on all obstacles when the player moves
