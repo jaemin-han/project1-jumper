@@ -218,4 +218,49 @@ function rightToLeft(){
 // scorePlus();
 
 
+//Please note -- this code is from our group's project [WDI w02-d03 lab]
+//Using the form method to get Player's name and favorite food on the second page
+//I manipulated the code to fit in my code
+// function courtesy of http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+var players;
+(window.onpopstate = function () {
+  var match,
+    pl     = /\+/g,  // Regex for replacing addition symbol with a space
+    search = /([^&=]+)=?([^&]*)/g,
+    decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+    query  = window.location.search.substring(1);
+
+    players = {};
+
+    while (match = search.exec(query))
+      players[decode(match[1])] = decode(match[2]);
+})();
+
+// creates a div for the cart, and attaches a section inside
+function playerName (itemObj) {
+  //creates a new section and list for each product
+  var $playerName = document.createElement('table');
+  $playerName.setAttribute('class', "cart-table");
+
+  //$playerName.innerHTML = itemObj.ID + " - $" + totalPrice;
+  delete itemObj.ID;
+  for (var property in itemObj) { //appends a list of the user's custom selections
+    var $item = document.createElement('td');
+    var $itemProp = document.createElement('td');
+    var $column= document.createElement('tr');
+    $item.setAttribute('class', "item-name");
+    $itemProp.setAttribute('class', "item-prop");
+    $item.innerHTML = property;
+    $itemProp.innerHTML = itemObj[property];
+    $column.appendChild($item);
+    $column.appendChild($itemProp);
+    $playerName.appendChild($column);
+  }
+  document.getElementById('player_name').appendChild($playerName);
+}
+
+playerName(players);
+
+
+
 });
