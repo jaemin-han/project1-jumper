@@ -226,6 +226,7 @@ input {
 }
 /*css styles for nyc_jumper.html file - End*/
 
+
 /*Below are css styles for index.html GAME file - start*/
 .flex-container {
   position: absolute;
@@ -306,7 +307,6 @@ input {
   left: 0px;
   top: 100px;
   background: url(../img/bmw.png) no-repeat;
-
 }
 
 #obstacle2 {
@@ -476,6 +476,7 @@ input {
   height: 50px;
 }
 
+
 /*Bottom Section division*/
 /*Into 2 sections*/
 .bottom_page {
@@ -491,8 +492,8 @@ input {
   margin-left: 15px;
   position: relative;
   min-height: 1px;
-
 }
+
 
 /*When a player reaches the bottom
 1) Scores a point
@@ -516,6 +517,7 @@ input {
   background-color: #DEB887;
 }
 
+
 /*Transferring data from the landing page*/
 #player_name {
   position: relative
@@ -527,6 +529,7 @@ input {
   text-align: left;
   background-color: #DEB887;
 }
+
 
 /*This css styling is for main.html backup page for future use*/
 /*When using main.html - make sure to use styles below*/
