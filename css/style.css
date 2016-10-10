@@ -595,9 +595,10 @@ input[type="submit"]:link {
     padding-left: 100px;
   }
 
-/*  .obstacles {
-    background: 50%;
-  }*/
+  .obstacles {
+    width: 15px;
+    height: 20px;
+  }
 
 /*  .half-col {
     height: 25px;
