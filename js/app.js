@@ -105,6 +105,21 @@ function leftToRight(){
 
   leftToRight();
 
+function leftToRight1(){
+  var $right1 = $('.right1');
+  var location = -85;
+  setInterval(function(){
+    $right1.css('left', location + 'px');
+    if (location > 1200) {
+      location = -70;
+    } else {
+      location += 45;
+    }
+  }, 100);
+};
+
+  leftToRight1();
+
 function leftToRight2(){
   var $ob8 = $('#obstacle8');
   var location = -300;
@@ -120,6 +135,35 @@ function leftToRight2(){
 
   leftToRight2();
 
+  function leftToRight3(){
+  var $ob8a = $('#obstacle8a');
+  var location = -150;
+  setInterval(function(){
+    $ob8a.css('left', location + 'px');
+    if (location > 1200) {
+      location = -120;
+    } else {
+      location += 35;
+    }
+  }, 100);
+};
+
+  leftToRight3();
+
+    function leftToRight4(){
+  var $ob8b = $('#obstacle8b');
+  var location = -450;
+  setInterval(function(){
+    $ob8b.css('left', location + 'px');
+    if (location > 1200) {
+      location = -120;
+    } else {
+      location += 45;
+    }
+  }, 100);
+};
+
+  leftToRight4();
 
 
 // Trying to move obstacles from right to left
@@ -183,6 +227,50 @@ function rightToLeft(){
 
   rightToLeft3();
 
+  function rightToLeft4(){
+    var $ob7c = $('#obstacle7c');
+    var distance = 400;
+  setInterval(function(){
+    $ob7c.css('left', distance + 'px');
+    if (distance < -50) {
+      distance = 1200;
+    } else {
+      distance -= 45;
+    }
+  }, 100);
+};
+
+  rightToLeft4();
+
+  function rightToLeft5(){
+    var $ob7d = $('#obstacle7d');
+    var distance = 350;
+  setInterval(function(){
+    $ob7d.css('left', distance + 'px');
+    if (distance < -50) {
+      distance = 1200;
+    } else {
+      distance -= 35;
+    }
+  }, 100);
+};
+
+  rightToLeft5();
+
+  function rightToLeft6(){
+    var $ob7e = $('#obstacle7e');
+    var distance = 190;
+  setInterval(function(){
+    $ob7e.css('left', distance + 'px');
+    if (distance < -50) {
+      distance = 1100;
+    } else {
+      distance -= 45;
+    }
+  }, 100);
+};
+
+  rightToLeft6();
 
 //Collide detaction on all obstacles when the player moves
 //Detection based on movement 'left' 'up' 'right' 'down'

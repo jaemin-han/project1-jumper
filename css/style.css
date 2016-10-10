@@ -274,6 +274,12 @@ input {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.start p {
+  margin-left: -90%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+
 .finish {
   order: 2;
   align-self: flex-end;
@@ -281,6 +287,12 @@ input {
   height: 50px;
   background-color: #F5DEB3;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.finish p {
+  margin-left: -91%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
 }
 
 .obstacles {
@@ -342,6 +354,25 @@ input {
   background: url(../img/blackcar.png) no-repeat;
 }
 
+#obstacle6a {
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: 400px;
+  right: 0px;
+  background-color: yellow;
+  background: url(../img/scooby.png) no-repeat;
+}
+
+#obstacle6b  {
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: 50px;
+  right: 0px;
+  background: url(../img/delivery.png) no-repeat;
+}
+
 #obstacle7 {
   position: absolute;
   width: 100px;
@@ -369,6 +400,33 @@ input {
   background: url(../img/cyclist.png) no-repeat;
 }
 
+#obstacle7c {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  top: 215px;
+  right: 0px;
+  background: url(../img/motorcycle.png) no-repeat;
+}
+
+#obstacle7d {
+  position: absolute;
+  width: 75px;
+  height: 50px;
+  left: 0px;
+  top: 60px;
+  background: url(../img/police1.png) no-repeat;
+}
+
+#obstacle7e {
+  position: absolute;
+  width: 75px;
+  height: 50px;
+  left: 0px;
+  top: 340px;
+  background: url(../img/police1.png) no-repeat;
+}
+
 #obstacle8 {
   position: absolute;
   width: 120px;
@@ -378,6 +436,23 @@ input {
   background: url(../img/schoolbus.png) no-repeat;
 }
 
+#obstacle8a {
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: 400px;
+  right: 0px;
+  background: url(../img/ambulance.png) no-repeat;
+}
+
+#obstacle8b {
+  position: absolute;
+  width: 70px;
+  height: 40px;
+  top: 200px;
+  right: 0px;
+  background: url(../img/bike.png) no-repeat;
+}
 /*Bottom Section division*/
 /*Into 2 sections*/
 .bottom_page {
@@ -416,8 +491,6 @@ input {
   text-align: center;
   background-color: #DEB887;
 }
-
-
 
 /*Transferring data from the landing page*/
 #player_name {
