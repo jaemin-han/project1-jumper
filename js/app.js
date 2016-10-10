@@ -33,26 +33,44 @@ $container.append($player);
 
 
 // Create arrow movements for player
+
+// var playerLeft = 0;
+
 $('body').keydown(function(move) {
   var position = $('.player').position();
 
   switch (move.keyCode)
   {
     case 37:
-      $('.player').css('left', position.left - 20 + 'px');
+      if(position.left >=4){
+        $('.player').css('left', position.left - 20 + 'px');
+      } else {
+        return false;
+      }
       divCollide($player, $obstacles);
       win($player, $winning);
       break;
+
     case 38:
-      $('.player').css('top', position.top - 20 + 'px');
+      if(position.top >=1){
+        $('.player').css('top', position.top - 20 + 'px');
+      } else {
+        return false;
+      }
       divCollide($player, $obstacles);
       win($player, $winning);
       break;
+
     case 39:
-      $('.player').css('left', position.left + 20 + 'px');
+      if(position.left <= 1220) {
+        $('.player').css('left', position.left + 20 + 'px');
+      } else {
+        return false;
+      }
       divCollide($player, $obstacles);
       win($player, $winning);
       break;
+
     case 40:
       $('.player').css('top', position.top + 20 + 'px');
       divCollide($player, $obstacles);
@@ -72,17 +90,16 @@ function getRandom(a, b) {
 var $obstacles =$(".obstacles");
 var width = $obstacles.get(0).width;
 var screenWidth = $(".flex-container").width();
-var duration = getRandom(3500, 1000);
-
+var duration = getRandom(1500, 1000);
 
 function animateObsticles() {
-  $obstacles.eq(0).css("left", -width).delay(getRandom(2000, 100)).animate({
+  $obstacles.eq(0).css("left", -width).delay(getRandom(5000, 2500)).animate({
   "left": screenWidth}, duration, animateObsticles);
 
-  $obstacles.eq(1).css("left", -width).delay(getRandom(3000, 1000)).animate({
+  $obstacles.eq(1).css("left", -width).delay(getRandom(5000, 3000)).animate({
   "left": screenWidth}, duration, animateObsticles);
 
-  $obstacles.eq(2).css("left", -width).delay(getRandom(2000, 1000)).animate({
+  $obstacles.eq(2).css("left", -width).delay(getRandom(4000, 2000)).animate({
   "left": screenWidth}, duration, animateObsticles);
   }
 
@@ -366,11 +383,11 @@ function scorePlus(){
 var players;
 
 (window.onpopstate = function () {
-  var match,
-    pl     = /\+/g,  // Regex for replacing addition symbol with a space
-    search = /([^&=]+)=?([^&]*)/g,
-    decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-    query  = window.location.search.substring(1);
+  var match;
+  var pl = /\+/g;  // Regex for replacing addition symbol with a space
+  var search = /([^&=]+)=?([^&]*)/g;
+  var decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); };
+  var query  = window.location.search.substring(1);
 
     players = {};
 
@@ -380,11 +397,11 @@ var players;
 
 // creates a div for the cart, and attaches a section inside
 function playerName (itemObj) {
+
   //creates a new section and list for each product
   var $playerName = document.createElement('table');
   $playerName.setAttribute('class', "cart-table");
 
-  //$playerName.innerHTML = itemObj.ID + " - $" + totalPrice;
   delete itemObj.ID;
   for (var property in itemObj) { //appends a list of the user's custom selections
     var $item = document.createElement('td');
@@ -402,5 +419,52 @@ function playerName (itemObj) {
 }
 
 playerName(players);
+
+
+//VERSION 2 - Test
+// var players;
+
+// (window.onpopstate = function () {
+//   var match;
+//   var pl = /\+/g;  // Regex for replacing addition symbol with a space
+//   var search = /([^&=]+)=?([^&]*)/g;
+//   var decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); };
+//   var query  = window.location.search.substring(1);
+
+//     players = {};
+
+//     while (match = search.exec(query))
+//       players[decode(match[1])] = decode(match[2]);
+// })();
+
+// // creates a div for the cart, and attaches a section inside
+// function playerName (itemObj) {
+
+//   // creates a new section and list for each product
+//   // var $playerName = document.createElement('table');
+//   // $playerName.setAttribute('class', "cart-table");
+
+//   var $playerName = $('<table class="cart-table"></table>');
+
+//   delete itemObj.ID;
+//   for (var property in itemObj) { //appends a list of the user's custom selections
+//     var $item = $('<td></td>');
+//     var $itemProp = $('<td></td>');
+//     var $column= $('<tr></tr>');
+//     $item.attr('class', "item-name");
+//     $itemProp.attr('class', "item-prop");
+//     $item.text = property;
+//     $itemProp.text = itemObj[property];
+//     $column.append($item);
+//     $column.append($itemProp);
+//     $playerName.append($column);
+//   }
+//   $('#player_name').append($playerName);
+// }
+
+// playerName(players);
+
+
+
 
 });
