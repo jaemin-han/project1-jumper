@@ -242,7 +242,7 @@ input {
 
 .flex-item {
   width: 83px;
-  height: 50px;
+  height: 60px;
   background-color: #DEB887;
   align-self: center;
   border: 0.5px solid black;
@@ -323,7 +323,7 @@ input {
   width: 75px;
   height: 50px;
   left: 0px;
-  top: 350px;
+  top: 390px;
   background: url(../img/police.png) no-repeat;
 }
 
@@ -331,7 +331,7 @@ input {
   position: absolute;
   width: 70px;
   height: 50px;
-  top: 350px;
+  top: 430px;
   right: 0px;
   background: url(../img/taxi1.png) no-repeat;
 }
@@ -386,7 +386,7 @@ input {
   position: absolute;
   width: 100px;
   height: 50px;
-  top: 340px;
+  top: 375px;
   right: 0px;
   background: url(../img/bus2.png) no-repeat;
 }
@@ -395,7 +395,7 @@ input {
   position: absolute;
   width: 80px;
   height: 50px;
-  top: 215px;
+  top: 235px;
   right: 0px;
   background: url(../img/cyclist.png) no-repeat;
 }
@@ -404,7 +404,7 @@ input {
   position: absolute;
   width: 80px;
   height: 50px;
-  top: 215px;
+  top: 235px;
   right: 0px;
   background: url(../img/motorcycle.png) no-repeat;
 }
@@ -423,8 +423,17 @@ input {
   width: 75px;
   height: 50px;
   left: 0px;
-  top: 340px;
+  top: 380px;
   background: url(../img/police1.png) no-repeat;
+}
+
+#obstacle7f {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  left: 0px;
+  top: 235px;
+  background: url(../img/bike2.png) no-repeat;
 }
 
 #obstacle8 {
@@ -449,10 +458,24 @@ input {
   position: absolute;
   width: 70px;
   height: 40px;
-  top: 200px;
+  top: 265px;
   right: 0px;
   background: url(../img/bike.png) no-repeat;
 }
+
+#obstacle8c {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  top: 230px;
+  right: 0px;
+}
+
+#obstacle8c img {
+  width: 40px;
+  height: 50px;
+}
+
 /*Bottom Section division*/
 /*Into 2 sections*/
 .bottom_page {
@@ -464,9 +487,11 @@ input {
 .half-col {
   width: 48%;
   float: left;
-  padding: 2em;
+  padding: 15px;
+  margin-left: 15px;
   position: relative;
   min-height: 1px;
+
 }
 
 /*When a player reaches the bottom
@@ -484,9 +509,8 @@ input {
 #score_win {
   position: relative
   height: 40px;
-  font-size: 20px;
+  font-size: 25px;
   color: black;
-  padding: 10px;
   border: 1px solid black;
   text-align: center;
   background-color: #DEB887;

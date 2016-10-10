@@ -135,7 +135,7 @@ function leftToRight2(){
 
   leftToRight2();
 
-  function leftToRight3(){
+function leftToRight3(){
   var $ob8a = $('#obstacle8a');
   var location = -150;
   setInterval(function(){
@@ -150,7 +150,7 @@ function leftToRight2(){
 
   leftToRight3();
 
-    function leftToRight4(){
+function leftToRight4(){
   var $ob8b = $('#obstacle8b');
   var location = -450;
   setInterval(function(){
@@ -164,6 +164,21 @@ function leftToRight2(){
 };
 
   leftToRight4();
+
+function leftToRight5(){
+  var $ob8c = $('#obstacle8c');
+  var location = -150;
+  setInterval(function(){
+    $ob8c.css('left', location + 'px');
+    if (location > 1200) {
+      location = -100;
+    } else {
+      location += 15;
+    }
+  }, 100);
+};
+
+  leftToRight5();
 
 
 // Trying to move obstacles from right to left
@@ -271,6 +286,23 @@ function rightToLeft(){
 };
 
   rightToLeft6();
+
+  function rightToLeft7(){
+    var $ob7f = $('#obstacle7f');
+    var distance = 190;
+  setInterval(function(){
+    $ob7f.css('left', distance + 'px');
+    if (distance < -50) {
+      distance = 1100;
+    } else {
+      distance -= 45;
+    }
+  }, 100);
+};
+
+  rightToLeft7();
+
+
 
 //Collide detaction on all obstacles when the player moves
 //Detection based on movement 'left' 'up' 'right' 'down'
