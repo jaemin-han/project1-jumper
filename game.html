@@ -1,0 +1,73 @@
+<!-- Project Name: NYC Jumper
+Author: Jaemin Han -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NYC Jumper</title>
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" charset="utf-8"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- This div uses a flexbox  -->
+  <div class="flex-container">
+    <div class="start">
+      <p>NYC Jumper</p>
+    </div>
+
+    <!-- *Obstacles randomized time and movement* -->
+    <div class="obstacles" id="obstacle1"></div>
+    <div class="obstacles" id="obstacle2"></div>
+    <div class="obstacles" id="obstacle3"></div>
+    <div class="obstacles" id="obstacle4"></div>
+    <div class="obstacles" id="obstacle5"></div>
+    <!-- *Obstacles from left to right* -->
+    <div class="obstacles" id="obstacle8"></div>
+    <div class="obstacles" id="obstacle8a"></div>
+    <div class="obstacles" id="obstacle8b"></div>
+    <div class="obstacles" id="obstacle8c">
+      <img src="img/runner.gif">
+    </div>
+    <div class="obstacles right" id="obstacle7"></div>
+    <div class="obstacles right" id="obstacle6"></div>
+    <div class="obstacles right1" id="obstacle6a"></div>
+    <div class="obstacles right1" id="obstacle6b"></div>
+    <!-- *Obstacles right to left* -->
+    <div class="obstacles" id="obstacle7a"></div>
+    <div class="obstacles" id="obstacle7b"></div>
+    <div class="obstacles" id="obstacle7c"></div>
+    <div class="obstacles" id="obstacle7d"></div>
+    <div class="obstacles" id="obstacle7e"></div>
+    <div class="obstacles" id="obstacle7f"></div>
+
+    <div class="finish">
+      <p>Finish Line</p>
+    </div>
+  </div>
+
+
+<!-- Displaying data/information from the landing page -->
+  <div class="bottom_page">
+    <div class="half-col">
+      <div id='player_name'></div>
+    </div>
+
+    <div class="half-col">
+      <div id="score_win">
+        <p>Score: <span id="score">0</span></p>
+      </div>
+    </div>
+  </div>
+
+<!-- Auto playing traffic sound as the page reloads -->
+  <audio autoplay>
+    <source src="img/traffic.mp3" type="audio/mp3">
+  </audio>
+
+</body>
+</html>

@@ -36,7 +36,6 @@ Author: Jaemin Han
 - Design: various characters/obstacles
 - Data transfer: Landing page to the game page
 - Score (+1): Track score every time a player crosses the street
-- 2 Landing Pages: Click of a button → Two themes*
 
 **Unsolved Problems**
 
