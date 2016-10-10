@@ -1,7 +1,5 @@
-Project Name: NYC Jumper
-Author: Jaemin Han
-
 # NYC Jumper
+https://jaemin-han.github.io/project1-jumper/
 
 #Wireframe
 
@@ -36,6 +34,7 @@ Author: Jaemin Han
 - Design: various characters/obstacles
 - Data transfer: Landing page to the game page
 - Score (+1): Track score every time a player crosses the street
+I replicated the landing page which can be found here: http://onbok.co/
 
 **Unsolved Problems**
 
@@ -43,8 +42,8 @@ Author: Jaemin Han
 - Work on Media Query to make my game responsive.
 - Unable to fully understand the Get/Post form which I referenced from the previous lab exercise.
 
-**The Game: NYC Jumper**
 
-I replicated the landing page which can be found here: http://onbok.co/
+
+
 
 
