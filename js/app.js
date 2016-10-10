@@ -396,21 +396,20 @@ var players;
 })();
 
 // creates a div for the cart, and attaches a section inside
-function playerName (itemObj) {
+function playerName (info) {
 
   //creates a new section and list for each product
   var $playerName = document.createElement('table');
   $playerName.setAttribute('class', "cart-table");
 
-  delete itemObj.ID;
-  for (var property in itemObj) { //appends a list of the user's custom selections
+  for (var property in info) { //appends a list of the user's custom selections
     var $item = document.createElement('td');
     var $itemProp = document.createElement('td');
     var $column= document.createElement('tr');
     $item.setAttribute('class', "item-name");
     $itemProp.setAttribute('class', "item-prop");
     $item.innerHTML = property;
-    $itemProp.innerHTML = itemObj[property];
+    $itemProp.innerHTML = info[property];
     $column.appendChild($item);
     $column.appendChild($itemProp);
     $playerName.appendChild($column);
@@ -419,52 +418,5 @@ function playerName (itemObj) {
 }
 
 playerName(players);
-
-
-//VERSION 2 - Test
-// var players;
-
-// (window.onpopstate = function () {
-//   var match;
-//   var pl = /\+/g;  // Regex for replacing addition symbol with a space
-//   var search = /([^&=]+)=?([^&]*)/g;
-//   var decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); };
-//   var query  = window.location.search.substring(1);
-
-//     players = {};
-
-//     while (match = search.exec(query))
-//       players[decode(match[1])] = decode(match[2]);
-// })();
-
-// // creates a div for the cart, and attaches a section inside
-// function playerName (itemObj) {
-
-//   // creates a new section and list for each product
-//   // var $playerName = document.createElement('table');
-//   // $playerName.setAttribute('class', "cart-table");
-
-//   var $playerName = $('<table class="cart-table"></table>');
-
-//   delete itemObj.ID;
-//   for (var property in itemObj) { //appends a list of the user's custom selections
-//     var $item = $('<td></td>');
-//     var $itemProp = $('<td></td>');
-//     var $column= $('<tr></tr>');
-//     $item.attr('class', "item-name");
-//     $itemProp.attr('class', "item-prop");
-//     $item.text = property;
-//     $itemProp.text = itemObj[property];
-//     $column.append($item);
-//     $column.append($itemProp);
-//     $playerName.append($column);
-//   }
-//   $('#player_name').append($playerName);
-// }
-
-// playerName(players);
-
-
-
 
 });
