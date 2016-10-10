@@ -1,7 +1,5 @@
-Project Name: NYC Jumper
-Author: Jaemin Han
-
 # NYC Jumper
+https://jaemin-han.github.io/project1-jumper/
 
 #Wireframe
 
