@@ -219,7 +219,7 @@ input {
   left: -28%;
   position: relative;
 }
-/*css styles for nyc_jumper.html file - End*/
+/*End - ******************************************/
 
 
 /*Below are css styles for index.html GAME file - start*/
@@ -472,7 +472,6 @@ input {
   height: 50px;
 }
 
-
 /*Bottom Section division*/
 /*Into 2 sections*/
 .bottom_page {
@@ -489,7 +488,7 @@ input {
   position: relative;
   min-height: 1px;
 }
-
+/*End **********************************/
 
 /*When a player reaches the bottom
 1) Scores a point
@@ -512,7 +511,7 @@ input {
   text-align: center;
   background-color: #DEB887;
 }
-
+/*End **********************************/
 
 /*Transferring data from the landing page*/
 #player_name {
@@ -525,7 +524,7 @@ input {
   text-align: left;
   background-color: #DEB887;
 }
-
+/*End **********************************/
 
 /*This css styling is for main.html backup page for future use*/
 /*When using main.html - make sure to use styles below*/
@@ -568,7 +567,7 @@ input[type="submit"]:link {
   width: 150px;
   height: 40px
 }
-
+/*End **********************************/
 
 /*Media Query*/
 @media screen and (max-width:979px) {
@@ -594,15 +593,6 @@ input[type="submit"]:link {
     width: 15px;
     height: 20px;
   }
-
-/*  .half-col {
-    height: 25px;
-    width: 25px;
-  }
-
-  .bottom_page .half-col {
-    font-size: 12px;
-  }*/
 
 }
 
