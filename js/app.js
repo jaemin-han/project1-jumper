@@ -1,8 +1,3 @@
-/*
-Project Name: NYC Jumper
-Author: Jaemin Han
-*/
-
 // document.addEventListener("DOMContentLoaded", function(event) {
 console.log('ready.');
 
