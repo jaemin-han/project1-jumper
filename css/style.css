@@ -14,12 +14,6 @@ body {
   overflow-y:hidden;
 }
 
-/*html {
-  position: relative;
-  height: 100%;
-  top: -150px;
-}*/
-
 /*Below are css styles for nyc_jumper.html file - start */
 .navbar-default {
   border: none;
@@ -41,28 +35,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-
-/*.navbar-brand {
-  font-size: 2em;
-  font-weight: 600;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: black !important;
-  float: left;
-  padding: 15px;
-  line-height: 20px;
-  height: 50px;
-}
-
-.navbar-white {
-  z-index: 70;
-  background-color: #fff;
-  color: #1bbc9b;
-  border-bottom: solid 1px #eee;
-}
-
-.navbar-brand-white {
-  color: #1bbc9b !important;
-}*/
 
 .main {
   height: 100%;
@@ -250,7 +222,6 @@ input {
   align-items: start-end;
   width: 28px;
   height: 50px;
-  /*margin: 0 0 0 50%;*/
   left: 50%;
   right: 0px;
   top: 0px;
@@ -263,7 +234,6 @@ input {
 }
 
 .start {
-/*  display: flex;*/
   align-self: flex-start;
   width: 100%;
   height: 50px;
